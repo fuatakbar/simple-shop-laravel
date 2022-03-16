@@ -45,7 +45,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
+            'url' => env('DATABASE_URL', 'mysql://doadmin:UG2YviuZMdsO1QnX@simpleshop-fuatakbar-do-user-8120926-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED'),
             'host' => env('DB_HOST', 'simpleshop-fuatakbar-do-user-8120926-0.b.db.ondigitalocean.com'),
             'port' => env('DB_PORT', '25060'),
             'database' => env('DB_DATABASE', 'defaultdb'),
