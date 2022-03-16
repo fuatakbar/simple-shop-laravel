@@ -11286,3 +11286,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.btm-bordered {
+  border-bottom: 1px solid #b1b1b1;
+}
+
+.navbar ul {
+  text-transform: uppercase;
+  color: #555555;
+  font-size: 14px;
+  padding: 8px;
+  text-decoration: none;
+}
+.navbar ul li {
+  text-decoration: none;
+  transition: 0.5s;
+}
+.navbar ul li:hover {
+  text-decoration: underline;
+  transition: 0.5s;
+}

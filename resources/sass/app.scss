@@ -6,3 +6,29 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Styles (GLOBAL)
+.btm-bordered {
+    border-bottom: 1px solid #b1b1b1;;
+}
+
+// Styles (ELEMENT)
+.navbar {
+    ul {
+        text-transform: uppercase;
+        color: #555555;
+        font-size: 14px;
+        padding: 8px;
+        text-decoration: none;
+
+        li {
+            text-decoration: none;
+            transition: 0.5s;
+
+            &:hover {
+                text-decoration: underline;
+                transition: 0.5s;
+            }
+        }
+    }
+}
