@@ -19,8 +19,13 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control form-control-sm @error('avatar.*') is-invalid @enderror" id="formFileSm" type="file" name="avatar[]">
+                                <input class="form-control form-control-sm @error('avatar.*') is-invalid @enderror @error('avatar') is-invalid @enderror" id="formFileSm" type="file" name="avatar[]">
 
+                                @error('avatar')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 @error('avatar.*')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
