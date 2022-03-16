@@ -6,7 +6,7 @@
         <div class="col-md-10">
             <div class="row justify-content-start products">
                 <div class="col-12 col-md-4 items">
-                    <a href="#">
+                    <a href="{{ route('product-detail') }}">
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-header">
@@ -22,7 +22,7 @@
                     </a>
                 </div>
                 <div class="col-12 col-md-4 items">
-                    <a href="#">
+                    <a href="{{ route('product-detail') }}">
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-header">
@@ -38,7 +38,7 @@
                     </a>
                 </div>
                 <div class="col-12 col-md-4 items">
-                    <a href="#">
+                    <a href="{{ route('product-detail') }}">
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-header">
@@ -54,7 +54,7 @@
                     </a>
                 </div>
                 <div class="col-12 col-md-4 items">
-                    <a href="#">
+                    <a href="{{ route('product-detail') }}">
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-header">
@@ -70,7 +70,7 @@
                     </a>
                 </div>
                 <div class="col-12 col-md-4 items">
-                    <a href="#">
+                    <a href="{{ route('product-detail') }}">
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-header">
@@ -86,7 +86,7 @@
                     </a>
                 </div>
                 <div class="col-12 col-md-4 items">
-                    <a href="#">
+                    <a href="{{ route('product-detail') }}">
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-header">
