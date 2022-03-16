@@ -13,7 +13,7 @@
 
                         <div class="row justify-content-center mb-4">
                             <div class="col-12 mb-3">
-                                <p for="name" class="text-center">{{ __('Avatar') }}</p>
+                                <p for="name" class="text-center">{{ __('Avatar') }}<br>(optional)</p>
                                 <div class="avatar-preview-wrapper text-center">
                                     <img src="{{ asset('img/dummy-avatar.jpg') }}" id="avatarPreview" alt="Avatar Preview">
                                 </div>
