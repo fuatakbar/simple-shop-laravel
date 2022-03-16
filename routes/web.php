@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\{Route, Auth};
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])
+Route::get('/', [HomeController::class, 'index'])
     ->name('home');
 
-Route::get('/product/detail/{id?}', [\App\Http\Controllers\HomeController::class, 'detail'])
+Route::get('/product/detail/{id?}', [HomeController::class, 'detail'])
     ->name('product-detail');
