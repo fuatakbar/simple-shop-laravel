@@ -11292,6 +11292,7 @@ textarea.form-control-lg {
 
 body {
   color: #b1b1b1;
+  background-color: #FFF;
 }
 
 a {
@@ -11401,5 +11402,60 @@ footer .copyright a:hover {
 @media (min-width: 768px) and (max-width: 1024px) {
   .products .items .card .price {
     font-size: 13px;
+  }
+}
+
+.product-detail {
+  background-color: #f8fafc;
+  padding: 10% 0;
+}
+@media (max-width: 767px) {
+  .product-detail {
+    padding: 5% 10%;
+  }
+}
+.product-detail .name {
+  text-transform: uppercase;
+  font-size: 35px;
+  text-align: center;
+  color: #000;
+  padding: 0 15%;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-detail .name {
+    font-size: 29px;
+  }
+}
+@media (max-width: 767px) {
+  .product-detail .name {
+    padding: 0 7%;
+  }
+}
+.product-detail hr {
+  width: 15%;
+  margin: 10px auto;
+  color: #000;
+  border: 1px solid;
+}
+.product-detail .price {
+  text-transform: uppercase;
+  font-size: 25px;
+  text-align: center;
+  color: #000;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-detail .price {
+    font-size: 19px;
+  }
+}
+.product-detail .description {
+  text-transform: none;
+  margin-top: 7%;
+  font-size: 19px;
+  width: 90%;
+}
+@media (max-width: 767px) {
+  .product-detail .description {
+    width: 100%;
   }
 }
