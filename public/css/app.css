@@ -11290,6 +11290,13 @@ textarea.form-control-lg {
   border-bottom: 1px solid #b1b1b1;
 }
 
+body {
+  color: #b1b1b1;
+}
+
+.navbar {
+  margin-bottom: 25px;
+}
 .navbar ul {
   text-transform: uppercase;
   color: #555555;
@@ -11302,6 +11309,28 @@ textarea.form-control-lg {
   transition: 0.5s;
 }
 .navbar ul li:hover {
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.logo {
+  margin-bottom: 75px;
+}
+
+footer {
+  margin-top: 75px;
+}
+footer .copyright {
+  padding-top: 35px;
+  border-top: 1px solid #b1b1b1;
+}
+footer .copyright a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  transition: 0.5s;
+}
+footer .copyright a:hover {
   text-decoration: underline;
   transition: 0.5s;
 }

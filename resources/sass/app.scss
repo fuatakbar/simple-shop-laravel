@@ -9,11 +9,17 @@
 
 // Styles (GLOBAL)
 .btm-bordered {
-    border-bottom: 1px solid #b1b1b1;;
+    border-bottom: 1px solid #b1b1b1;
+}
+
+body {
+    color: #b1b1b1;
 }
 
 // Styles (ELEMENT)
 .navbar {
+    margin-bottom: 25px;
+
     ul {
         text-transform: uppercase;
         color: #555555;
@@ -23,6 +29,31 @@
 
         li {
             text-decoration: none;
+            transition: 0.5s;
+
+            &:hover {
+                text-decoration: underline;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+.logo {
+    margin-bottom: 75px;
+}
+
+footer {
+    margin-top: 75px;
+
+    .copyright {
+        padding-top: 35px;
+        border-top: 1px solid #b1b1b1;
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
             transition: 0.5s;
 
             &:hover {
