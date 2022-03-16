@@ -21,3 +21,9 @@ Route::get('/', [HomeController::class, 'index'])
 
 Route::get('/product/detail/{id?}', [HomeController::class, 'detail'])
     ->name('product-detail');
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
+    Route::get('/user-list', function(){
+        //
+    })->name('admin.user-list');
+});
