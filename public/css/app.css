@@ -11459,3 +11459,11 @@ footer .copyright a:hover {
     width: 100%;
   }
 }
+
+.register .avatar-preview-wrapper {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.register .avatar-preview-wrapper img {
+  width: 25%;
+}

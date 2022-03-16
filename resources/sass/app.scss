@@ -191,3 +191,13 @@ footer {
         }
     }
 }
+
+.register {
+    .avatar-preview-wrapper {
+        object-fit: cover;
+
+        img {
+            width: 25%;
+        }
+    }
+}
