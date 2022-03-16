@@ -11467,3 +11467,8 @@ footer .copyright a:hover {
 .register .avatar-preview-wrapper img {
   width: 25%;
 }
+@media (max-width: 767px) {
+  .register .avatar-preview-wrapper img {
+    width: 50%;
+  }
+}

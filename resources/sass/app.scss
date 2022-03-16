@@ -198,6 +198,10 @@ footer {
 
         img {
             width: 25%;
+
+            @media (max-width: 767px) {
+                width: 50%;
+            }
         }
     }
 }
