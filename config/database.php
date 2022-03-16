@@ -45,12 +45,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL', 'mysql://doadmin:UG2YviuZMdsO1QnX@simpleshop-fuatakbar-do-user-8120926-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED'),
-            'host' => env('DB_HOST', 'simpleshop-fuatakbar-do-user-8120926-0.b.db.ondigitalocean.com'),
-            'port' => env('DB_PORT', '25060'),
-            'database' => env('DB_DATABASE', 'defaultdb'),
-            'username' => env('DB_USERNAME', 'doadmin'),
-            'password' => env('DB_PASSWORD', 'UG2YviuZMdsO1QnX'),
+            'url' => env('DATABASE_URL', ''),
+            'host' => env('DB_HOST', ''),
+            'port' => env('DB_PORT', ''),
+            'database' => env('DB_DATABASE', ''),
+            'username' => env('DB_USERNAME', ''),
+            'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
