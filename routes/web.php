@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Cms\UserListController;
 use Illuminate\Support\Facades\{Route, Auth};
 use App\Http\Controllers\HomeController;
 
@@ -23,7 +24,5 @@ Route::get('/product/detail/{id?}', [HomeController::class, 'detail'])
     ->name('product-detail');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
-    Route::get('/user-list', function(){
-        //
-    })->name('admin.user-list');
+    Route::get('/user-list', [UserListController::class, 'index'])->name('admin.user-list');
 });
