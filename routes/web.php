@@ -25,5 +25,5 @@ Route::get('/product/detail/{id?}', [HomeController::class, 'detail'])
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
     Route::get('/user-list', [UserListController::class, 'index'])->name('admin.user-list');
-    Route:;put('/user-list/approve/{id}', [UserListController::class, 'approveUser'])->name('admin.user-list.approve');
+    Route::put('/user-list/approve/{id}', [UserListController::class, 'approveUser'])->name('admin.user-list.approve');
 });

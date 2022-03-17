@@ -9,6 +9,11 @@ use Yajra\DataTables\DataTables;
 
 class UserListController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth', 'admin']);
+    }
+
     public function index(Request $request) {
         if ($request->ajax()) {
             $data = User::select('*');
@@ -17,7 +22,7 @@ class UserListController extends Controller
                 ->addIndexColumn()
                 ->addColumn('action', function($row) {
                    $btn = '<div class="text-center">' ;
-                   $btn = $row->is_verified ? $btn.'<a href="javascript:void(0)" class="btn btn-success btn-disabled">Verified</a>' : $btn.'<a href="javascript:void(0)" class="btn btn-primary">Approve</a>';
+                   $btn = $row->is_verified ? $btn.'<btn href="javascript:void(0)" class="btn btn-success btn-disabled" id="btn-verified">Verified</btn>' : $btn.'<btn class="btn btn-primary" data-user-id="'.$row->id.'" id="btn-approve">Approve</btn>';
                    $btn = $btn.'</div>';
 
                    return $btn;
@@ -31,14 +36,19 @@ class UserListController extends Controller
 
     public function approveUser($id) {
         try {
-            User::whereId($id)->update([
-               'is_verified' => true,
-            ]);
+            $user = User::whereId($id)->first();
+            $user->is_verified = true;
 
-            return response()->json([
-               'success' => true,
-               'message' => 'User with id '.$id.' successfully verify'
-            ]);
+            if ($user->save()) {
+                return response()->json([
+                    'success' => true,
+                    'message' => 'User with id '.$id.' successfully verify',
+                    'user' => $user,
+                ]);
+            } else {
+                throw new \Exception("Failed to approve this user, please try again");
+            }
+
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,

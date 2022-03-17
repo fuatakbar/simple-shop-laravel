@@ -11472,3 +11472,7 @@ footer .copyright a:hover {
     width: 50%;
   }
 }
+
+.cms.user-list btn#btn-verified {
+  cursor: default;
+}
