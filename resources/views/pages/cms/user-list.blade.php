@@ -8,7 +8,8 @@
                 <table class="table table-bordered user-list data-table">
                     <thead>
                         <tr>
-                            <th>No</th>
+                            <th>ID</th>
+                            <th>Avatar</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Action</th>

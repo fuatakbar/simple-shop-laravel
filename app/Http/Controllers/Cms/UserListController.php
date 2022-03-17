@@ -21,13 +21,21 @@ class UserListController extends Controller
             return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function($row) {
-                   $btn = '<div class="text-center">' ;
+                   $btn = '<div class="text-center">';
                    $btn = $row->is_verified ? $btn.'<btn href="javascript:void(0)" class="btn btn-success btn-disabled" id="btn-verified">Verified</btn>' : $btn.'<btn class="btn btn-primary" data-user-id="'.$row->id.'" id="btn-approve">Approve</btn>';
                    $btn = $btn.'</div>';
 
                    return $btn;
                 })
-                ->rawColumns(['action'])
+                ->addColumn('avatar', function($row) {
+                    $avatarPath = $row->avatar !== null ? asset($row->avatar) : 'https://randomuser.me/api/portraits/men/'.rand(1, 75).'.jpg';
+                    $avatar = '<div class="avatar text-center">';
+                    $avatar = $avatar.'<img class="img-fluid" src="'.$avatarPath.'">';
+                    $avatar = $avatar.'</div>';
+
+                    return $avatar;
+                })
+                ->rawColumns(['action', 'avatar'])
                 ->make(true);
         }
 
