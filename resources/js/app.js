@@ -16,7 +16,7 @@ $(document).ready(function(){
             ajax: `${window.location.origin}/admin/user-list`,
             columns: [
                 {data: 'id', name: 'id'},
-                {data: 'avatar', name: 'avatar'},
+                {data: 'avatar', name: 'avatar', orderable: false, searchable: false},
                 {data: 'name', name: 'name'},
                 {data: 'email', name: 'email'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
