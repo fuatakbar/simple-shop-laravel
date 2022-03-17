@@ -17,7 +17,7 @@ class UserListController extends Controller
                 ->addIndexColumn()
                 ->addColumn('action', function($row) {
                    $btn = '<div class="text-center">' ;
-                   $btn = $btn.'<a href="javascript:void(0)" class="btn btn-primary">Approve</a>';
+                   $btn = $row->is_verified ? $btn.'<a href="javascript:void(0)" class="btn btn-success btn-disabled">Verified</a>' : $btn.'<a href="javascript:void(0)" class="btn btn-primary">Approve</a>';
                    $btn = $btn.'</div>';
 
                    return $btn;
@@ -27,5 +27,24 @@ class UserListController extends Controller
         }
 
         return view('pages.cms.user-list');
+    }
+
+    public function approveUser($id) {
+        try {
+            User::whereId($id)->update([
+               'is_verified' => true,
+            ]);
+
+            return response()->json([
+               'success' => true,
+               'message' => 'User with id '.$id.' successfully verify'
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'error' => $e->getMessage(),
+                'message' => 'User with id '.$id.' failed to verify',
+            ]);
+        }
     }
 }
